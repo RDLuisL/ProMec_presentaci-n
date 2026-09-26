@@ -25,11 +25,11 @@
       <div class="notice-signatures" aria-label="Firmas principales">
         <figure>
           <img src="./assets/sign_nelson.png" alt="Firma de Nelson Arancibia" />
-          <figcaption>Nelson Arancibia</figcaption>
+          <figcaption>Director General</figcaption>
         </figure>
         <figure>
           <img src="./assets/sign_mauricio.png" alt="Firma de Mauricio Carmona" />
-          <figcaption>Mauricio Carmona</figcaption>
+          <figcaption>Admin. de Contrato</figcaption>
         </figure>
       </div>
 
@@ -46,8 +46,13 @@
 
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Ir al inicio">
-      <span class="brand-mark">PROMEC</span>
-      <span class="brand-sub">SPA</span>
+      <img
+        class="brand-logo"
+        src="./assets/main_logo.png"
+        alt="ProMec SpA"
+        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+      />
+      <span class="brand-fallback" hidden>PROMEC <b>SPA</b></span>
     </a>
 
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -216,8 +221,20 @@
         </div>
       </div>
 
+      <a href="#pilares" class="mobile-gesture mobile-gesture-prev" aria-label="Volver a la diapositiva anterior">
+        <img
+          src="./assets/arrow_4.svg"
+          alt="Volver a la diapositiva anterior"
+          onerror="this.closest('a').style.display='none';"
+        />
+      </a>
+
       <a href="#inicio" class="mobile-gesture mobile-gesture-home" aria-label="Volver a la primera diapositiva">
-        <img src="./assets/arrow-41.svg" alt="Volver al inicio" />
+        <img
+          src="./assets/arrow_41.svg"
+          alt="Volver al inicio"
+          onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='./assets/arrow-41.svg';}"
+        />
       </a>
     </section>
   </main>

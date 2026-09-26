@@ -1,26 +1,30 @@
-# ProMec web v3
+# ProMec web v4
 
 Cambios incluidos:
-- Modal inicial con mensaje corporativo.
-- Checkbox persistente mediante localStorage (`promec_hide_initial_notice_v1`).
-- Firmas: `assets/sign_nelson.png` y `assets/sign_mauricio.png`.
-- Botón “Ver presentación” activa fullscreen y avanza a la diapositiva 2.
-- En fullscreen de escritorio se muestra `assets/logo_scrolldown.png` al final de cada diapositiva.
-- En móvil:
-  - slide 1: `assets/logo_swipe_vertical.svg`
-  - slides 2–6: `assets/logo_swipe_horizontal.svg`
-  - slide 7: `assets/arrow-41.svg`, vuelve al inicio
-- Corrección del carrusel móvil para iniciar siempre en la primera tarjeta.
-- El swipe vertical ya no interfiere con el swipe horizontal del carrusel.
-- Eliminados bordes, fondos y sombras de los contenedores `.media-card`.
-- Conservado el sonido de transición con volumen maestro.
 
-## Assets nuevos requeridos
-Copia en `assets/`:
-- sign_nelson.png
-- sign_mauricio.png
-- logo_scrolldown.png
-- logo_swipe_vertical.svg
-- logo_swipe_horizontal.svg
-- arrow-41.svg
-- favicon.ico (si aún no está)
+1. Modal inicial reducido aproximadamente 25% respecto de la versión anterior.
+2. Firmas:
+   - `sign_nelson.png` -> **Director General**
+   - `sign_mauricio.png` -> **Admin. de Contrato**
+3. Navbar preparado para `./assets/main_logo.png`.
+4. En fullscreen de escritorio, el recuadro de contacto de la diapositiva 7 queda a la derecha.
+5. `logo_swipe_vertical.svg` y `logo_swipe_horizontal.svg` aumentados al 400% del tamaño anterior, con límite responsivo.
+6. El botón **Entendido** solo cierra el modal y mantiene la diapositiva 1.
+7. Flechas:
+   - `arrow_41.svg` se usa para volver al inicio en la diapositiva 7 móvil.
+   - Se agregó fallback a `arrow-41.svg` por compatibilidad con el nombre usado en v3.
+   - `arrow_4.svg` se usa en la diapositiva 7 móvil para volver a la diapositiva anterior.
+8. Se mantiene el sistema de audio, fullscreen, carruseles, swipe y tarjetas sin cuadros.
+
+## Assets que debes tener
+
+- `./assets/main_logo.png`
+- `./assets/sign_nelson.png`
+- `./assets/sign_mauricio.png`
+- `./assets/logo_scrolldown.png`
+- `./assets/logo_swipe_vertical.svg`
+- `./assets/logo_swipe_horizontal.svg`
+- `./assets/arrow_4.svg`
+- `./assets/arrow_41.svg`
+
+La versión incluye compatibilidad con `arrow-41.svg` si todavía mantienes ese nombre.

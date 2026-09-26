@@ -23,6 +23,11 @@ const dontShowAgain = document.getElementById('dontShowAgain');
 
 function openNoticeModal(){
   if (!noticeModal) return;
+
+  // El aviso siempre se presenta sobre la diapositiva 1.
+  // Se evita restaurar una posición de scroll anterior del navegador.
+  window.scrollTo({top:0, left:0, behavior:'auto'});
+
   noticeModal.classList.add('is-open');
   noticeModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
@@ -36,6 +41,7 @@ function closeNoticeModal(){
   noticeModal.classList.remove('is-open');
   noticeModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
+  // No se cambia de diapositiva ni se activa fullscreen aquí.
 }
 
 if (localStorage.getItem(MODAL_STORAGE_KEY) !== 'true'){
