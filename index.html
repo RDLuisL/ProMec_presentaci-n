@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f2e4d" />
+  <title>ProMec SpA | Presentación interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">PROMEC</span>
+      <span class="brand-sub">SPA</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#ingenieria">Ingeniería</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#sustentabilidad">Sustentabilidad</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="presentation">
+    <section id="inicio" class="slide hero">
+      <div class="hero-bg parallax" data-depth="0.06"></div>
+      <div class="overlay"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">PROMEC SPA</p>
+          <h1>Servicios a la <span>Minería</span></h1>
+          <p class="lead">Soluciones que mantienen tu industria en movimiento.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#nosotros">Ver presentación</a>
+            <a class="btn btn-secondary" href="#contacto">Contáctanos</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal delay-1">
+          <div class="orb">
+            <img src="assets/hero-workers.png" alt="Ingenieros de ProMec en una faena minera" />
+          </div>
+          <span class="floating-pill p1">Ingeniería</span>
+          <span class="floating-pill p2">Mantenimiento</span>
+          <span class="floating-pill p3">Operación minera</span>
+        </div>
+      </div>
+
+      <a href="#nosotros" class="scroll-cue" aria-label="Ir a la siguiente sección">⌄</a>
+    </section>
+
+    <section id="nosotros" class="slide section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">QUIÉNES SOMOS</p>
+          <h2>Nosotros</h2>
+          <p>Brindamos soluciones integrales en ingeniería, construcción, montaje, logística y mantenimiento industrial para minería, energía e infraestructura.</p>
+        </div>
+
+        <div class="gallery gallery-3 desktop-grid mobile-snap">
+          <article class="media-card reveal">
+            <img src="assets/que_hacemos.png" alt="Qué hacemos" />
+          </article>
+          <article class="media-card reveal delay-1">
+            <img src="assets/compromiso.png" alt="Nuestro compromiso" />
+          </article>
+          <article class="media-card reveal delay-2">
+            <img src="assets/vision_2031.png" alt="Visión 2031" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ingenieria" class="slide">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">ÁREAS TÉCNICAS</p>
+          <h2>Ingeniería, montaje y construcción</h2>
+          <p>Ahora esta sección utiliza los cuatro engranes separados para mejorar el comportamiento responsivo en monitor y dispositivos móviles.</p>
+        </div>
+
+        <div class="gallery gallery-4 desktop-grid mobile-snap">
+          <article class="media-card reveal">
+            <img src="assets/ing.png" alt="Ingeniería" />
+          </article>
+          <article class="media-card reveal delay-1">
+            <img src="assets/CCO.png" alt="Obras civiles, infraestructura y construcción" />
+          </article>
+          <article class="media-card reveal delay-2">
+            <img src="assets/flow_net.png" alt="Redes y fluidos" />
+          </article>
+          <article class="media-card reveal delay-3">
+            <img src="assets/mast_estrc.png" alt="Maestranza y estructuras" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="slide section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">OPERACIÓN MINERA</p>
+          <h2>Servicios integrales y mantenimiento</h2>
+          <p>Visualización por tarjetas separadas para facilitar lectura, escalado y una mejor distribución en escritorio y móvil.</p>
+        </div>
+
+        <div class="gallery gallery-3 desktop-grid mobile-snap">
+          <article class="media-card reveal">
+            <img src="assets/service_01.png" alt="Plantas de procesamiento" />
+          </article>
+          <article class="media-card reveal delay-1">
+            <img src="assets/service_02.png" alt="Servicios de control y bombeo" />
+          </article>
+          <article class="media-card reveal delay-2">
+            <img src="assets/service_03.png" alt="Aseguramiento y gestión" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sustentabilidad" class="slide">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">IMPACTO RESPONSABLE</p>
+          <h2>Sustentabilidad, comunidades e I+D</h2>
+          <p>La sección aprovecha ahora los tres archivos PNG separados para una presentación más flexible y limpia.</p>
+        </div>
+
+        <div class="gallery gallery-3 desktop-grid mobile-snap">
+          <article class="media-card reveal">
+            <img src="assets/ges_amb.png" alt="Gestión ambiental" />
+          </article>
+          <article class="media-card reveal delay-1">
+            <img src="assets/des_comunit.png" alt="Desarrollo comunitario" />
+          </article>
+          <article class="media-card reveal delay-2">
+            <img src="assets/inv_tranf_tec.png" alt="Investigación y transferencia tecnológica" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pilares" class="slide section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">PILARES ESTRATÉGICOS</p>
+          <h2>Nuestra propuesta de valor</h2>
+          <p>Los tres pilares separados mejoran legibilidad, foco visual y adaptación de layout en distintas resoluciones.</p>
+        </div>
+
+        <div class="gallery gallery-3 desktop-grid mobile-snap narrow-cards">
+          <article class="media-card reveal">
+            <img src="assets/multidicip.png" alt="Alcance multidisciplinario" />
+          </article>
+          <article class="media-card reveal delay-1">
+            <img src="assets/inn_sost.png" alt="Innovación y sostenibilidad" />
+          </article>
+          <article class="media-card reveal delay-2">
+            <img src="assets/cont_operat.png" alt="Continuidad operativa" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="slide closing">
+      <div class="closing-bg parallax" data-depth="0.04"></div>
+      <div class="overlay"></div>
+
+      <div class="container closing-grid">
+        <div class="closing-card reveal">
+          <p class="eyebrow">PROMEC SPA</p>
+          <h2>Gracias</h2>
+          <p class="lead">Conversemos sobre el próximo desafío de tu operación minera.</p>
+
+          <div class="contact-list">
+            <a href="tel:+56998665692">+56 9 9866 5692</a>
+            <a href="tel:+56978938816">+56 9 7893 8816</a>
+            <a href="mailto:info@promec.cl">info@promec.cl</a>
+            <a href="https://www.promec.cl" target="_blank" rel="noopener">www.promec.cl</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="dots" id="dots" aria-label="Navegación por diapositivas"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
