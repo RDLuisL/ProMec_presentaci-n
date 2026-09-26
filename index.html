@@ -5,9 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0f2e4d" />
   <title>ProMec SpA | Presentación interactiva</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Modal inicial -->
+  <div class="notice-modal" id="noticeModal" aria-hidden="true">
+    <div class="notice-backdrop"></div>
+    <section class="notice-dialog" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+      <div class="notice-accent"></div>
+      <h2 id="noticeTitle">Aviso importante</h2>
+      <div class="notice-copy">
+        <p><strong>Estimado(a) Sr(a).</strong></p>
+        <p>Para garantizar una experiencia de visualización óptima y precisa de esta presentación HTML, le recordamos la importancia de prestar especial atención a la simbología y los iconos que se despliegan en la pantalla. Estos elementos visuales proporcionan información clave y facilitan la interpretación de los datos y contenidos presentados.</p>
+        <p>Su diligencia al observar estos detalles contribuirá a una mejor comprensión y aprovechamiento de esta herramienta corporativa.</p>
+        <p>Atentamente,<br><strong>El equipo de PROMEC SPA</strong></p>
+      </div>
+
+      <div class="notice-signatures" aria-label="Firmas principales">
+        <figure>
+          <img src="./assets/sign_nelson.png" alt="Firma de Nelson Arancibia" />
+          <figcaption>Nelson Arancibia</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/sign_mauricio.png" alt="Firma de Mauricio Carmona" />
+          <figcaption>Mauricio Carmona</figcaption>
+        </figure>
+      </div>
+
+      <label class="notice-check">
+        <input type="checkbox" id="dontShowAgain" />
+        <span>No mostrar este anuncio nuevamente</span>
+      </label>
+
+      <button class="btn btn-primary notice-confirm" id="noticeConfirm" type="button">Entendido</button>
+    </section>
+  </div>
+
   <div class="progress"><span id="progressBar"></span></div>
 
   <header class="topbar">
@@ -30,7 +64,7 @@
   </header>
 
   <main id="presentation">
-    <section id="inicio" class="slide hero">
+    <section id="inicio" class="slide hero" data-slide="1">
       <div class="hero-bg parallax" data-depth="0.06"></div>
       <div class="overlay"></div>
 
@@ -41,7 +75,7 @@
           <p class="lead">Soluciones que mantienen tu industria en movimiento.</p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#nosotros">Ver presentación</a>
+            <button class="btn btn-primary" id="startPresentationBtn" type="button">Ver presentación</button>
             <a class="btn btn-secondary" href="#contacto">Contáctanos</a>
           </div>
         </div>
@@ -56,10 +90,12 @@
         </div>
       </div>
 
-      <a href="#nosotros" class="scroll-cue" aria-label="Ir a la siguiente sección">⌄</a>
+      <div class="mobile-gesture mobile-gesture-vertical" aria-hidden="true">
+        <img src="./assets/logo_swipe_vertical.svg" alt="" />
+      </div>
     </section>
 
-    <section id="nosotros" class="slide section-dark">
+    <section id="nosotros" class="slide section-dark" data-slide="2">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">QUIÉNES SOMOS</p>
@@ -79,100 +115,89 @@
           </article>
         </div>
       </div>
+      <div class="mobile-gesture mobile-gesture-horizontal" aria-hidden="true">
+        <img src="./assets/logo_swipe_horizontal.svg" alt="" />
+      </div>
     </section>
 
-    <section id="ingenieria" class="slide">
+    <section id="ingenieria" class="slide" data-slide="3">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">ÁREAS TÉCNICAS</p>
           <h2>Ingeniería, montaje y construcción</h2>
-          <p>Ahora esta sección utiliza los cuatro engranes separados para mejorar el comportamiento responsivo en monitor y dispositivos móviles.</p>
+          <p>Desde la ingeniería conceptual hasta el desarrollo y ejecución de proyectos, obras civiles, redes, fluidos y estructuras.</p>
         </div>
 
         <div class="gallery gallery-4 desktop-grid mobile-snap">
-          <article class="media-card reveal">
-            <img src="assets/ing.png" alt="Ingeniería" />
-          </article>
-          <article class="media-card reveal delay-1">
-            <img src="assets/CCO.png" alt="Obras civiles, infraestructura y construcción" />
-          </article>
-          <article class="media-card reveal delay-2">
-            <img src="assets/flow_net.png" alt="Redes y fluidos" />
-          </article>
-          <article class="media-card reveal delay-3">
-            <img src="assets/mast_estrc.png" alt="Maestranza y estructuras" />
-          </article>
+          <article class="media-card reveal"><img src="assets/ing.png" alt="Ingeniería" /></article>
+          <article class="media-card reveal delay-1"><img src="assets/CCO.png" alt="Obras civiles, infraestructura y construcción" /></article>
+          <article class="media-card reveal delay-2"><img src="assets/flow_net.png" alt="Redes y fluidos" /></article>
+          <article class="media-card reveal delay-3"><img src="assets/mast_estrc.png" alt="Maestranza y estructuras" /></article>
         </div>
+      </div>
+      <div class="mobile-gesture mobile-gesture-horizontal" aria-hidden="true">
+        <img src="./assets/logo_swipe_horizontal.svg" alt="" />
       </div>
     </section>
 
-    <section id="servicios" class="slide section-dark">
+    <section id="servicios" class="slide section-dark" data-slide="4">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">OPERACIÓN MINERA</p>
           <h2>Servicios integrales y mantenimiento</h2>
-          <p>Visualización por tarjetas separadas para facilitar lectura, escalado y una mejor distribución en escritorio y móvil.</p>
+          <p>Mantenimiento de plantas, control y bombeo, aseguramiento técnico y gestión para sostener la continuidad operacional.</p>
         </div>
 
         <div class="gallery gallery-3 desktop-grid mobile-snap">
-          <article class="media-card reveal">
-            <img src="assets/service_01.png" alt="Plantas de procesamiento" />
-          </article>
-          <article class="media-card reveal delay-1">
-            <img src="assets/service_02.png" alt="Servicios de control y bombeo" />
-          </article>
-          <article class="media-card reveal delay-2">
-            <img src="assets/service_03.png" alt="Aseguramiento y gestión" />
-          </article>
+          <article class="media-card reveal"><img src="assets/service_01.png" alt="Plantas de procesamiento" /></article>
+          <article class="media-card reveal delay-1"><img src="assets/service_02.png" alt="Servicios de control y bombeo" /></article>
+          <article class="media-card reveal delay-2"><img src="assets/service_03.png" alt="Aseguramiento y gestión" /></article>
         </div>
+      </div>
+      <div class="mobile-gesture mobile-gesture-horizontal" aria-hidden="true">
+        <img src="./assets/logo_swipe_horizontal.svg" alt="" />
       </div>
     </section>
 
-    <section id="sustentabilidad" class="slide">
+    <section id="sustentabilidad" class="slide" data-slide="5">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">IMPACTO RESPONSABLE</p>
           <h2>Sustentabilidad, comunidades e I+D</h2>
-          <p>La sección aprovecha ahora los tres archivos PNG separados para una presentación más flexible y limpia.</p>
+          <p>Gestión ambiental, desarrollo comunitario e investigación y transferencia tecnológica para una minería responsable.</p>
         </div>
 
         <div class="gallery gallery-3 desktop-grid mobile-snap">
-          <article class="media-card reveal">
-            <img src="assets/ges_amb.png" alt="Gestión ambiental" />
-          </article>
-          <article class="media-card reveal delay-1">
-            <img src="assets/des_comunit.png" alt="Desarrollo comunitario" />
-          </article>
-          <article class="media-card reveal delay-2">
-            <img src="assets/inv_tranf_tec.png" alt="Investigación y transferencia tecnológica" />
-          </article>
+          <article class="media-card reveal"><img src="assets/ges_amb.png" alt="Gestión ambiental" /></article>
+          <article class="media-card reveal delay-1"><img src="assets/des_comunit.png" alt="Desarrollo comunitario" /></article>
+          <article class="media-card reveal delay-2"><img src="assets/inv_tranf_tec.png" alt="Investigación y transferencia tecnológica" /></article>
         </div>
+      </div>
+      <div class="mobile-gesture mobile-gesture-horizontal" aria-hidden="true">
+        <img src="./assets/logo_swipe_horizontal.svg" alt="" />
       </div>
     </section>
 
-    <section id="pilares" class="slide section-dark">
+    <section id="pilares" class="slide section-dark" data-slide="6">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">PILARES ESTRATÉGICOS</p>
           <h2>Nuestra propuesta de valor</h2>
-          <p>Los tres pilares separados mejoran legibilidad, foco visual y adaptación de layout en distintas resoluciones.</p>
+          <p>Alcance multidisciplinario, innovación y sostenibilidad, y continuidad operativa.</p>
         </div>
 
         <div class="gallery gallery-3 desktop-grid mobile-snap narrow-cards">
-          <article class="media-card reveal">
-            <img src="assets/multidicip.png" alt="Alcance multidisciplinario" />
-          </article>
-          <article class="media-card reveal delay-1">
-            <img src="assets/inn_sost.png" alt="Innovación y sostenibilidad" />
-          </article>
-          <article class="media-card reveal delay-2">
-            <img src="assets/cont_operat.png" alt="Continuidad operativa" />
-          </article>
+          <article class="media-card reveal"><img src="assets/multidicip.png" alt="Alcance multidisciplinario" /></article>
+          <article class="media-card reveal delay-1"><img src="assets/inn_sost.png" alt="Innovación y sostenibilidad" /></article>
+          <article class="media-card reveal delay-2"><img src="assets/cont_operat.png" alt="Continuidad operativa" /></article>
         </div>
+      </div>
+      <div class="mobile-gesture mobile-gesture-horizontal" aria-hidden="true">
+        <img src="./assets/logo_swipe_horizontal.svg" alt="" />
       </div>
     </section>
 
-    <section id="contacto" class="slide closing">
+    <section id="contacto" class="slide closing" data-slide="7">
       <div class="closing-bg parallax" data-depth="0.04"></div>
       <div class="overlay"></div>
 
@@ -190,6 +215,10 @@
           </div>
         </div>
       </div>
+
+      <a href="#inicio" class="mobile-gesture mobile-gesture-home" aria-label="Volver a la primera diapositiva">
+        <img src="./assets/arrow-41.svg" alt="Volver al inicio" />
+      </a>
     </section>
   </main>
 

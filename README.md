@@ -1,30 +1,26 @@
+# ProMec web v3
 
-# ProMec web v2
+Cambios incluidos:
+- Modal inicial con mensaje corporativo.
+- Checkbox persistente mediante localStorage (`promec_hide_initial_notice_v1`).
+- Firmas: `assets/sign_nelson.png` y `assets/sign_mauricio.png`.
+- Botón “Ver presentación” activa fullscreen y avanza a la diapositiva 2.
+- En fullscreen de escritorio se muestra `assets/logo_scrolldown.png` al final de cada diapositiva.
+- En móvil:
+  - slide 1: `assets/logo_swipe_vertical.svg`
+  - slides 2–6: `assets/logo_swipe_horizontal.svg`
+  - slide 7: `assets/arrow-41.svg`, vuelve al inicio
+- Corrección del carrusel móvil para iniciar siempre en la primera tarjeta.
+- El swipe vertical ya no interfiere con el swipe horizontal del carrusel.
+- Eliminados bordes, fondos y sombras de los contenedores `.media-card`.
+- Conservado el sonido de transición con volumen maestro.
 
-## Cambios incluidos
-- Mejor distribución visual en monitor y móvil.
-- Uso de archivos separados:
-  - `CCO.png`
-  - `cont_operat.png`
-  - `des_comunit.png`
-  - `flow_net.png`
-  - `ges_amb.png`
-  - `ing.png`
-  - `inn_sost.png`
-  - `inv_tranf_tec.png`
-  - `mast_estrc.png`
-  - `multidicip.png`
-- Secciones con galerías responsivas:
-  - Escritorio: grid
-  - Móvil: carrusel horizontal con scroll-snap
-- Efectos de sonido al cambiar de diapositiva sin archivos externos:
-  - Implementado con Web Audio API en `app.js`
-- Navegación:
-  - menú superior
-  - puntos laterales
-  - teclado
-  - swipe vertical en móvil
-  - scroll suave
-
-## Si deseas usar tus propios archivos locales
-Solo sustituye los archivos de la carpeta `assets/` manteniendo exactamente estos nombres.
+## Assets nuevos requeridos
+Copia en `assets/`:
+- sign_nelson.png
+- sign_mauricio.png
+- logo_scrolldown.png
+- logo_swipe_vertical.svg
+- logo_swipe_horizontal.svg
+- arrow-41.svg
+- favicon.ico (si aún no está)
